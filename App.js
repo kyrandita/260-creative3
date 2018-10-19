@@ -18,7 +18,12 @@ function nodeDirective() {
     },
     restrict: 'E',
     template: (`
-      <div ng-class='root.type == "list" && "list"'>
+      <div ng-class='{
+          list: root.type == "list",
+          critical: root.type == "flag" && root.props.current == "critical",
+          warn: root.type == "flag" && root.props.current == "warn",
+          notice: root.type == "flag" && root.props.current == "notice" && "notice"
+        }'>
         <select ng-model="newtype" ng-options="type.type for type in types" ng-change='changeType()'></select>
         <div ng-if="root.type == 'list'">
           <node ng-repeat='child in root.props.children' root=child></node>

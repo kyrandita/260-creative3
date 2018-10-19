@@ -1,9 +1,21 @@
 node {
   display: block;
-  padding: .5em .3em;
+}
+node > div {
   border-left: 2px solid gray;
   border-radius: 1em 0 0 1em;
+  padding: .5em .3em;
 }
 node > div:not(.list) {
   display: flex;
+}
+node > div.notice {
+  background-color: lightblue;
+}
+node > div.warn {
+  background-color: yellow;
+}
+
+node > div.critical {
+  background-color: red;
 }
