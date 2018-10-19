@@ -66,12 +66,8 @@ function nodeDirective() {
         Object.assign(scope.root, scope.types[0]);
       }
       scope.newtype = scope.types.find((el) => el.type == scope.root.type);
-      // scope.flags = ['critical', 'warn', 'notice'],
       scope.changeType = function () {
-        console.log(scope.newtype);
         Object.assign(scope.root, scope.newtype);
-
-        console.log(scope.root);
       };
     },
   }
