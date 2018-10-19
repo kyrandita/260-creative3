@@ -1,0 +1,9 @@
+node {
+  display: block;
+  padding: .5em .3em;
+  border-left: 2px solid gray;
+  border-radius: 1em 0 0 1em;
+}
+node > div:not(.list) {
+  display: flex;
+}

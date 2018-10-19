@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+  <script src="App.js"></script>
+  <link rel="stylesheet" href="App.css" />
+</head>
+<body>
+  <p>This isn't intended to be a wow for you the user. It's a technically exciting thing, not a fun flashy thing to get everyones attention.</p>
+  <p>What I've designed here is a recursive directive that allows for infinite depth, allowing you to change types at any level at any time while also easily seeing the JSON representation of the data you've just created.</p>
+  <p>This is a problem I ran into at work recently and this serves as a proof of concept for what my coworker said couldn't be done. I've dressed it up for the purposes of this assignment, but My intention was not to WOW anyone.</p>
+  <p>If you play around with it for a little there are some glaring issues I didn't polish because I plan on doing that for the version for work which has an actual use case, this doesn't so I didn't fix them.</p>
+  <div ng-app='app' ng-controller='appCtrl'>
+    <node root=root></node>
+    <hr>
+    <pre>{{root | json}}</pre>
+  </div>
+</body>
+</html>
